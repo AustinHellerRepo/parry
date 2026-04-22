@@ -28,6 +28,7 @@ use na::ComplexField;
 /// Controls how the voxelization determines which voxel needs
 /// to be considered empty, and which ones will be considered full.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 pub enum FillMode {
     /// Only consider full the voxels intersecting the surface of the
     /// shape being voxelized.
