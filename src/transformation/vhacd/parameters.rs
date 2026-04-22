@@ -5,6 +5,7 @@ use crate::transformation::voxelization::FillMode;
 ///
 /// See <https://github.com/Unity-Technologies/VHACD#parameters> for details.
 #[derive(Debug, Clone, Copy, PartialEq)]
+#[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 pub struct VHACDParameters {
     /// Maximum concavity.
     ///
