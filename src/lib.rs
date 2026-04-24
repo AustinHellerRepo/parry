@@ -70,6 +70,7 @@ pub mod mass_properties;
 pub mod partitioning;
 pub mod query;
 pub mod shape;
+pub mod profiling;
 #[cfg(feature = "alloc")]
 pub mod transformation;
 pub mod utils;

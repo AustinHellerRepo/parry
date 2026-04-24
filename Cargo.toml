@@ -11,7 +11,7 @@ resolver = "2"
 rust.unexpected_cfgs = { level = "warn", check-cfg = [
     'cfg(feature, values("dim2", "dim3", "f32", "f64"))',
     # "wavefront" is only used for 3D crates.
-    'cfg(feature, values("wavefront"))',
+    'cfg(feature, values("wavefront", "profiling"))',
 ] }
 
 [workspace.lints.clippy]

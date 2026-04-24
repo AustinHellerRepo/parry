@@ -53,6 +53,10 @@ pub fn contact_manifolds_trimesh_shape_shapes<ManifoldData, ContactData>(
     ManifoldData: Default,
     ContactData: Default + Copy,
 {
+    crate::profiling_span!(
+        "parry_contact_manifolds_trimesh_shape_shapes",
+    );
+
     if let Some(trimesh1) = shape1.as_trimesh() {
         contact_manifolds_trimesh_shape(
             dispatcher, pos12, trimesh1, shape2, prediction, manifolds, workspace, false,

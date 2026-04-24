@@ -59,6 +59,7 @@ improved_fixed_point_support = []
 # Do not enable this feature directly. It is automatically
 # enabled with the "simd-stable" or "simd-nightly" feature.
 simd-is-enabled = []
+profiling = ["tracing", "tracing-chrome"]
 
 [lib]
 name = "parry2d"
@@ -90,6 +91,8 @@ log = "0.4"
 thiserror = { version = "2", default-features = false }
 ena = { version = "0.14.3", optional = true, default-features = false }
 smallvec = "1"
+tracing = { version = "0.1", optional = true }
+tracing-chrome = { version = "0.7", optional = true }
 
 [dev-dependencies]
 simba = { version = "0.9", default-features = false }
