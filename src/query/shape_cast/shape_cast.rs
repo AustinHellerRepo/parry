@@ -7,6 +7,7 @@ use crate::partitioning::BvhLeafCost;
 
 /// The status of the time-of-impact computation algorithm.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 pub enum ShapeCastStatus {
     /// The shape-casting algorithm ran out of iterations before achieving convergence.
     ///
@@ -31,6 +32,7 @@ pub enum ShapeCastStatus {
 
 /// The result of a shape casting..
 #[derive(Copy, Clone, Debug)]
+#[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 pub struct ShapeCastHit {
     /// The time at which the objects touch.
     pub time_of_impact: Real,
