@@ -54,6 +54,10 @@ where
     D: ?Sized + QueryDispatcher,
     G1: ?Sized + CompositeShape,
 {
+    crate::profiling_span!(
+        "parry_contact_composite_shape_shape",
+    );
+
     CompositeShapeRef(g1)
         .contact_with_shape(dispatcher, pose12, g2, prediction)
         .map(|c| c.1)

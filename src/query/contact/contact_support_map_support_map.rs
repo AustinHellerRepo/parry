@@ -47,6 +47,10 @@ where
     G1: ?Sized + SupportMap,
     G2: ?Sized + SupportMap,
 {
+    crate::profiling_span!(
+        "parry_contact_support_map_support_map_with_params",
+    );
+
     let dir = if let Some(init_dir) = init_dir {
         init_dir
     } else if let Some(init_dir) = (pos12.translation).try_normalize() {

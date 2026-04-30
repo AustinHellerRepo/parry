@@ -58,6 +58,7 @@ encase = [ "dep:encase", "glamx/encase" ]
 # Do not enable this feature directly. It is automatically
 # enabled with the "simd-stable" or "simd-nightly" feature.
 simd-is-enabled = []
+profiling = ["tracing", "tracing-chrome"]
 
 [lib]
 name = "parry3d"
@@ -95,6 +96,8 @@ smallvec = "1"
 static_assertions = "1"
 foldhash = { version = "0.2", default-features = false }
 encase = { version = "0.12", optional = true }
+tracing = { version = "0.1", optional = true }
+tracing-chrome = { version = "0.7", optional = true }
 
 
 [dev-dependencies]
